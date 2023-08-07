@@ -1,0 +1,1 @@
+Third set tasks: Random, 'List with Strings and numbers', 'AVGPos_Neg', 'Merge Sort', 'Remove Even Numbers from List'
