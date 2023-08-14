@@ -1,30 +1,37 @@
 package Les6.home_work;
 
 public class ComputerSettings {
-    String OZU;
-    String HDD;
-    String OS;
-    String color;
+    private int OZU;
+    private int HHD;
+    private String OS;
+    private String color;
 
 
-    public ComputerSettings(String OZU, String HDD, String OS, String color) {
+    public ComputerSettings(int OZU, int HDD, String OS, String color) {
         this.OZU = OZU;
-        this.HDD = HDD;
+        this.HHD = HDD;
         this.OS = OS;
         this.color = color;
     }
 
-    //    @Override
-//    public String toString() {
-//        return "ComputerSettings{" +
-//                "OZU='" + OZU + '\'' +
-//                ", HDD='" + HDD + '\'' +
-//                ", OS='" + OS + '\'' +
-//                ", color='" + color + '\'' +
-//                '}';
-//    }
     @Override
     public String toString() {
-        return "Computer: OZU = " + OZU + "; HHD = " + HDD + "; OS = " + OS + "; color = " + color;
+        return "Computer: OZU = " + OZU + "; HHD = " + HHD + "; OS = " + OS + "; color = " + color;
+    }
+
+    public int getOZU() {
+        return OZU;
+    }
+
+    public int getHHD() {
+        return HHD;
+    }
+
+    public String getOS() {
+        return OS;
+    }
+
+    public String getColor() {
+        return color;
     }
 }
