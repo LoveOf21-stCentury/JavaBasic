@@ -2,7 +2,24 @@ package Les5.home_work;
 
 import java.util.*;
 
-public class PhoneBook {
+public class PhoneBook implements Comparable<PhoneBook> {
+    protected String name;
+    protected int number;
+    protected Map<String, ArrayList<Integer>> map;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public Map<String, ArrayList<Integer>> getMap() {
+        return map;
+    }
+
+
     public static void addNumber(String name, int number, Map<String, ArrayList<Integer>> map) {
         if (map.containsKey(name)) {
             map.get(name).add(number);
@@ -12,6 +29,7 @@ public class PhoneBook {
             map.put(name, list);
         }
     }
+
     public static void main(String[] args) {
         Map<String, ArrayList<Integer>> bookMap = new HashMap<>();
         addNumber("Vladimir", 2744, bookMap);
@@ -26,4 +44,11 @@ public class PhoneBook {
         addNumber("Vasilina", 1, bookMap);
         System.out.println(bookMap);
     }
+
+    @Override
+    public int compareTo(PhoneBook o) {
+        return this.number - o.number;
+    }
 }
+
+
