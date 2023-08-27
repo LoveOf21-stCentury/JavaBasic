@@ -15,8 +15,16 @@ public class Les1 {
 //    Результат нужно сохранить в файле output.txt
 //1000
     public static void main(String[] args) {
-        System.out.println(pow(3, 0));
+//        System.out.println(pow(3, 0));
+
+        int a1 = 1;
+        int b1 = 7;
+        int c1 = 2;
+        int d1 = 1;
+        String str = "";
+        task1(a1, b1, c1, d1, str);
     }
+
     private static double pow(double a, double b) {
         if (a == 0 || a == 1) {
             return a;
@@ -51,6 +59,33 @@ public class Les1 {
         } else {
             return result * result * a;
         }
+    }
+
+
+    public static void task1(int a, int b, int c, int d, String str) {
+        //2.	+На вход некоторому исполнителю подаётся два числа (a, b). У исполнителя есть две команды
+//- команда 1 (к1): увеличить в с раза, а умножается на c
+//- команда 2 (к2): увеличить на d ( +2 ), к a прибавляется d
+//    написать программу, которая выдаёт набор команд, позволяющий число a превратить в число b или сообщить, что это невозможно
+//    Пример 1: а = 1, b = 7, c = 2, d = 1
+//    ответ: к1, к1, к1, к1, к1, к1 или к1, к2, к1, к1, к1 или к1, к1, к2, к1.
+//            Пример 2: а = 11, b = 7, c = 2, d = 1
+//    ответ: нет решения.
+//            *Подумать над тем, как сделать минимальное количество команд
+
+        if (a > b) {
+            return;
+        } else if (a == b) {
+            System.out.println("Solution is " + str);
+            return;
+        }
+        if (c != 0) {
+            task1(a + d, b, c, d, str + " k1");
+        }
+        if (d != 0 || d != 1) {
+            task1(a * c, b, c, d, str + " k2");
+        }
+
     }
 }
 
