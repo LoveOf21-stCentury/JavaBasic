@@ -43,7 +43,7 @@ public class PhoneBook implements Comparable<PhoneBook> {
         addNumber("Vasilina", 2800, bookMap);
         addNumber("Vasilina", 1, bookMap);
         System.out.println(bookMap);
-        Collections.sort(bookMap);
+//        Collections.sort(bookMap);
         System.out.println(bookMap);
     }
 
